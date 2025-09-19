@@ -17,17 +17,22 @@ public class SumFor {
     }
 
     static int sumof(int a, int b){
-        int result = (b-a+1)*(a+b)/2;
+        int result = (Math.abs(b-a)+1)*(a+b)/2;
         return result;
     }
 
     static void printAtoB(int a, int b, int sum){
-        while (a <= b){
-            System.out.print(a);
-            if (a != b){
+        int max = a;
+        int min = a;
+        if (b > a) max = b;
+        if (b < a) min = b;
+
+        while (min <= max){
+            System.out.print(min);
+            if (min != max){
                 System.out.print(" + ");
             }
-            a++;
+            min++;
         }
         System.out.print("= " + sum);
     }
