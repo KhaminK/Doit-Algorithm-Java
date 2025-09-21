@@ -10,14 +10,14 @@ public class SumWhile {
         System.out.print("n: ");
         int n = stdIn.nextInt();
 
-        int sum = 0;
         int i = 1;
 
-        sum = sumOfNumbersTilN(i, n, sum);
+        int sum = sumOfNumbersTilN(i, n);
         System.out.println("Result: " + sum);
     }
 
-    static int sumOfNumbersTilN(int i, int n, int sum){
+    static int sumOfNumbersTilN(int i, int n){
+        int sum = 0;
         while (i <= n){
             sum += i;
             i++;
